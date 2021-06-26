@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class AlumnoController extends Controller
 {
-    use ApiResponse;
+    use ApiResponser;
 
     public $servicioAlumno;
 

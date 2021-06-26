@@ -11,8 +11,7 @@ class ServicioAlumno{
     public $uriBase;
     public function __construct()
     {
-        $this->uriBase = config('services.alumnos.base_uri');
-        
+        $this->uriBase = config('services.alumnos.base_uri');    
     }
 
     public function obtenerAlumno($matricula)
@@ -20,4 +19,8 @@ class ServicioAlumno{
         return $this->consultar('GET',"/api/AlumnosApi/GetAlumnosByMatricula?matricula=".$matricula);
     }
 
+    public function obtenercc($matricula)
+    {
+        return $this->consultar('GET',"/api/AlumnosApi/GetConstanciaccByMatricula?matricula=".$matricula);
+    }
 }
